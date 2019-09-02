@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/node,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=node,visualstudiocode
 
@@ -104,3 +103,6 @@ typings/
 .history
 
 # End of https://www.gitignore.io/api/node,visualstudiocode
+
+# Temporary image folder
+tmp/uploads/*
