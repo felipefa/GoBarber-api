@@ -14,15 +14,21 @@ const routes = new Router();
 const upload = multer(multerConfig);
 
 routes.post('/sessions', SessionController.store);
+
 routes.post('/users', UserController.store);
 
+/**
+ * To access the next routes the user must be logged in
+ */
 routes.use(authMiddleware);
-
-routes.get('/providers', ProviderController.index);
 
 routes.put('/users', UserController.update);
 
+routes.get('/providers', ProviderController.index);
+
+routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
+
 routes.post('/files', upload.single('file'), FileController.store);
 
 export default routes;
